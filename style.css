@@ -1,13 +1,3 @@
-pbButton, img {
-    padding: 0;
-    font-size: 0;
-    border: none;
-    width: 200px;
-}
-
-startQuizLost, img {
-  padding: 0;
-  font-size: 0;
-  border: none;
+.pbQuizContainer, img {
   width: 200px;
 }
