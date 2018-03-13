@@ -7,33 +7,32 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
 
-<div class="container">
 
-        <div id="pbQuestionContainer">
-<img src="images/prisonbreak.jpg" class = "img-circle">
-          <button id="startQuizPb">
-        </button>
-      </div>
-
-
-    <div id="lostQuizContainer">
-      <img src="images/lost.jpg" class="img-circle">
-          <button id="startQuizLost">
-        </button>
-</div>
-
-      <div id="question">
-        </div>
-
-            <div id="options">
-                </div>
-</div>
+  <div class="row">
+    <img src="images/prisonbreak.jpg" class="img-circle">
+    <img src="images/lost.jpg" class="img-circle">
+    <img src="images/strangerthings.jpg" class="img-circle">
+    <img src="images/narcos.jpg" class="img-circle">
+    <img src="images/breakingbad.jpg" class="img-circle">
+  </div>
 
 
-      <script src="main.js"></script>
-  </body>
+  <div class="quiz-container">
+    <div id="quiz"></div>
+  </div>
+  <button id="previous">Previous Question</button>
+  <button id="next">Next Question</button>
+  <button id="submit">Submit Quiz</button>
+  <div id="results"></div>
+
+
+
+  <script src="main.js">
+  </script>
+
+
+</body>
+
 </html>
