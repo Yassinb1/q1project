@@ -21,6 +21,10 @@
     }
   ];
 
+  let beginPb = document.querySelector("#pb")
+  let quizContainer = document.querySelector(".quiz-container")
+
+
   function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
@@ -115,21 +119,39 @@
     showSlide(currentSlide - 1);
   }
 
-  const quizContainer = document.getElementById("quiz");
+  function unHideQuiz(){
+      // if (quizBox.style.display === "none") {
+      //   quizBox.style.display = "block";
+      // }
+      // else {
+      //   quizBox.style.display = "none";
+      // }
+      quizBox.style.display = "block"
+  }
+
+  const quiz = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
 
   // display quiz right away
   buildQuiz();
 
+
+  const quizBox = document.querySelector(".quizBox")
+  const prisonBreak = document.querySelector(".prisonBreak")
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
+  let pbButton = document.querySelector("#pbButton");
+
   showSlide(0);
 
+
   // on submit, show results
+
+  prisonBreak.addEventListener("click", unHideQuiz)
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);

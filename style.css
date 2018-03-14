@@ -1,5 +1,5 @@
 
-img {
+#icons, img {
   width: 200px;
   height: 120px;
 }
@@ -24,9 +24,8 @@ body{
   display: block;
   margin-bottom: 10px;
 }
-
-button  {
-    font-family: 'Work Sans', sans-serif;
+button{
+  font-family: 'Work Sans', sans-serif;
     font-size: 22px;
     background-color: #279;
     color: #fff;
@@ -40,7 +39,6 @@ button:hover{
     background-color: #38a;
 }
 
-
 .slide{
   position: absolute;
   left: 0px;
@@ -50,12 +48,19 @@ button:hover{
   opacity: 0;
   transition: opacity 0.5s;
 }
+
 .active-slide{
   opacity: 1;
   z-index: 2;
 }
+
 .quiz-container{
   position: relative;
   height: 200px;
   margin-top: 40px;
+  display: block;
+}
+
+.quizBox {
+  display: none
 }
