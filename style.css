@@ -1,13 +1,11 @@
-
 #icons, img {
   width: 200px;
-  height: 120px;
+  height: 150px;
 }
 
 body{
-    font-size: 20px;
     text-align: center;
-    background-color: #f8f6f0;
+
 }
 
 .question {
@@ -30,7 +28,7 @@ button{
     background-color: #279;
     color: #fff;
     border: 0px;
-    border-radius: 3px;
+    border-radius: 50%;
     padding: 20px;
     cursor: pointer;
     margin-bottom: 20px;

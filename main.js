@@ -1,29 +1,49 @@
 (function() {
   const myQuestions = [{
-      question: "What was Lincoln's request for his last meal?",
+      question: "What is Lionel Messi's jersey number?",
       answers: {
-        a: "Eggs and Hashbrowns",
-        b: "Blueberry Pancakes",
-        c: "Blueberry Muffins",
-        d: "Waffles",
-      },
-      correctAnswer: "b"
-    },
-    {
-      question: "Who loses a hand?",
-      answers: {
-        a: "Theodore Bagwell",
-        b: "Bradley Bellick",
-        c: "Jonathan Krantz",
-        d: "Roland Glenn"
+        a: "10",
+        b: "33",
+        c: "28",
+        d: "16",
       },
       correctAnswer: "a"
-    }
+    },
+    {
+      question: "What was Lionel Messi's childhood team?",
+      answers: {
+        a: "AC Milan",
+        b: "Barcelona Youth Team",
+        c: "Newell's Old Boys",
+        d: "None"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "What is Lionel Messi's international team?",
+      answers: {
+        a: "Argentina",
+        b: "Spain",
+        c: "Brazil",
+        d: "France"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "Who was lionel messi's idol as a child?",
+      answers: {
+        a: "Pele",
+        b: "Maradona",
+        c: "Beggio",
+        d: "Basten"
+      },
+      correctAnswer: "a"
+    },
+
   ];
 
-  let beginPb = document.querySelector("#pb")
-  let quizContainer = document.querySelector(".quiz-container")
 
+  let quizContainer = document.querySelector(".quiz-container")
 
   function buildQuiz() {
     // we'll need a place to store the HTML output
@@ -79,7 +99,7 @@
         numCorrect++;
 
         // color the answers green
-        answerContainers[questionNumber].style.color = "lightgreen";
+        answerContainers[questionNumber].style.color = "green";
       } else {
         // if answer is wrong or blank
         // color the answers red
@@ -88,7 +108,7 @@
     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} correct.`;
   }
 
   function showSlide(n) {
@@ -120,12 +140,6 @@
   }
 
   function unHideQuiz(){
-      // if (quizBox.style.display === "none") {
-      //   quizBox.style.display = "block";
-      // }
-      // else {
-      //   quizBox.style.display = "none";
-      // }
       quizBox.style.display = "block"
   }
 
@@ -138,20 +152,22 @@
 
 
   const quizBox = document.querySelector(".quizBox")
-  const prisonBreak = document.querySelector(".prisonBreak")
+  const messi = document.querySelector(".messi")
+  const harden = document.querySelector(".harden")
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
-  let pbButton = document.querySelector("#pbButton");
+
 
   showSlide(0);
 
 
   // on submit, show results
 
-  prisonBreak.addEventListener("click", unHideQuiz)
+  messi.addEventListener("click", unHideQuiz)
+  harden.addEventListener("click", unHideQuiz)
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
