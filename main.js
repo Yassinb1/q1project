@@ -1,47 +1,46 @@
 (function() {
-  const myQuestions = [{
-      question: "What is Lionel Messi's jersey number?",
+  let myQuestions = [{
+      question: "What national team does Lionel Messi play for?",
+      answers: {
+        a: "Brazil",
+        b: "Argentina",
+        c: "Russia",
+        d: "France",
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "What jersey number does Messi wear at Barcelona?",
       answers: {
         a: "10",
-        b: "33",
-        c: "28",
-        d: "16",
+        b: "7",
+        c: "13",
+        d: "99"
       },
       correctAnswer: "a"
     },
     {
-      question: "What was Lionel Messi's childhood team?",
+      question: "How old is Lionel Messi?",
       answers: {
-        a: "AC Milan",
-        b: "Barcelona Youth Team",
-        c: "Newell's Old Boys",
-        d: "None"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "What is Lionel Messi's international team?",
-      answers: {
-        a: "Argentina",
-        b: "Spain",
-        c: "Brazil",
-        d: "France"
+        a: "30 years old",
+        b: "25 years old",
+        c: "35 years old",
+        d: "23 years old"
       },
       correctAnswer: "a"
     },
     {
-      question: "Who was lionel messi's idol as a child?",
+      question: "Who was Lionel Messi's idol as a child?",
       answers: {
         a: "Pele",
         b: "Maradona",
         c: "Beggio",
         d: "Basten"
       },
-      correctAnswer: "a"
+      correctAnswer: "b"
     },
 
   ];
-
 
   let quizContainer = document.querySelector(".quiz-container")
 
@@ -79,6 +78,9 @@
     quizContainer.innerHTML = output.join("");
   }
 
+
+
+
   function showResults() {
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll(".answers");
@@ -108,7 +110,7 @@
     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} correct.`;
+    resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} answers correct.`;
   }
 
   function showSlide(n) {
@@ -143,12 +145,15 @@
       quizBox.style.display = "block"
   }
 
+
+
   const quiz = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
 
-  // display quiz right away
   buildQuiz();
+  // display quiz right away
+
 
 
   const quizBox = document.querySelector(".quizBox")
@@ -167,7 +172,6 @@
   // on submit, show results
 
   messi.addEventListener("click", unHideQuiz)
-  harden.addEventListener("click", unHideQuiz)
   submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);

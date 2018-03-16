@@ -5,39 +5,42 @@
   <meta charset="utf-8">
   <title>Interactive Player Quiz</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
   <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-<h1> Interactive Player Quiz </h1>
-<p>Please select a player to begin</p>
+  <h1>Welcome to the Interactive Player Quiz </h1>
+  <h3>*Please select a player to begin!</h3>
+  <br>
 
   <div class="row">
     <img src="images/lionelmessi.jpg" class="img-circle messi shake-slow">
     <img src="images/jamesharden.jpg" class="img-circle harden shake-slow">
-    <img src="images/lebronjames.png" class="img-circle lebron shake-slow">
-    <img src="images/tombrady.jpg" class="img-circle shake-slow">
-    <img src="images/ronaldo.jpg" class="img-circle shake-slow">
+    <img src="images/stephcurry.jpg" class="img-circle lebron shake-slow">
+    <img src="images/paulpogba.jpg" class="img-circle shake-slow">
+    <img src="images/neymarjr.jpg" class="img-circle shake-slow">
   </div>
 
-<div class="quizBox">
-  <div class="quiz-container">
-    <div id="quiz"></div>
-  </div>
+  <div class="quizBox">
+    <div class="quiz-container">
+    </div>
+    <br><br><br><br>
 
-  <div class="quizButtons">
-    <button id="previous">Previous</button>
-    <button id="next">Next</button>
-    <button id="submit">Submit</button>
-  </div>
-</div>
+    <button id="previous" class='lined thin'>Previous Question</button>
+    <button id="next" class='lined thin'>Next Question</button>
+    <button id="submit" class='lined thin'>Submit</button>
 
-  <div id="results"></div>
+  </div>
+  
+<div id="results"></div>
 
 
 
   <script src="main.js"></script>
 
 </body>
+
 </html>

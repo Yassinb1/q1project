@@ -1,11 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+
 #icons, img {
-  width: 200px;
+  width: 220px;
   height: 150px;
 }
 
 body{
     text-align: center;
-
+    background-color: #f8f6f0;
+    font-family: 'Patrick Hand SC', cursive;
 }
 
 .question {
@@ -14,6 +17,7 @@ body{
 }
 
 .answers {
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: left;
   display: inline-block;
@@ -22,20 +26,30 @@ body{
   display: block;
   margin-bottom: 10px;
 }
-button{
-  font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    background-color: #279;
-    color: #fff;
-    border: 0px;
-    border-radius: 50%;
-    padding: 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
+
+
+  button  {
+      align-self:center;
+      background:transparent;
+      padding:.7rem .7rem;
+      margin:0 1rem;
+      transition:all .5s ease;
+      color:#41403E;
+      font-size:2rem;
+      letter-spacing:1px;
+      outline:none;
+      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    }
 button:hover{
     background-color: #38a;
 }
+
 
 .slide{
   position: absolute;
@@ -55,10 +69,13 @@ button:hover{
 .quiz-container{
   position: relative;
   height: 200px;
-  margin-top: 40px;
+  margin-top: 20px;
   display: block;
 }
 
+#results {
+  font-size: 35px;
+}
 .quizBox {
   display: none
 }
